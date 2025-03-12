@@ -313,6 +313,9 @@ footer p {
 html{
     scroll-behavior: smooth;
 }
+:target {
+    scroll-margin-top: 65px; 
+}
 
 /* Responsive Design */
 @media (max-width: 700px) {
