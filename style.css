@@ -261,7 +261,7 @@ body {
 
 #contact form input:focus,
 #contact form textarea:focus {
-    border-color: #4CAF50;
+    border-color: grey;
     outline: none;
 }
 
