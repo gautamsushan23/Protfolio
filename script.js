@@ -14,20 +14,55 @@ navItems.forEach(item => {
 });
 
 function validateForm() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields before submitting.");
+    if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+        alert("All fields are required.");
         return false; 
     }
 
-    alert("Thank you for contacting me, " + name + "! I'll get back to you soon.");
-    
-    document.querySelector("form").reset();
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
 
-    return false; 
+    return true; 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let form = document.querySelector("form");
+    let successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        
+        if (validateForm()) {
+            let formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successMessage.style.display = "block";
+                    form.reset();
+
+                    setTimeout(() => {
+                        successMessage.style.display = "none";
+                    }, 2500);
+                } else {
+                    alert("There was a problem submitting the form.");
+                }
+            }).catch(error => alert("Error: " + error));
+        }
+    });
+});
+
 
 
