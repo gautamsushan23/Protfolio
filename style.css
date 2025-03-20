@@ -81,6 +81,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: 100vh;
     padding: 85px ;
     text-align: center;
     color: white;
@@ -352,6 +353,7 @@ html{
     .hero {
         flex-direction: column;
         text-align: center;
+        height: fit-content;
     }
 
     .hero-photo {
