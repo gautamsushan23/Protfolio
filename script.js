@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var typed = new Typed("#typed-text", {
+        strings: ["Student", "Developer", "Freelancer", "Designer"],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true
+    });
+});
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
