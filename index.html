@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sushan Gautam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#home"><img src="./Images/logo.png" alt="Logo" class="logo-img" /></a>
+        </div>
+        <!-- Nav Links -->
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            
+        </ul>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+    </div>
+</nav>
+
+
+<!-- Home Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="welcome">Welcome to My Protfolio</h1>
+        <p>My name is</p>
+        <h1 class="sushan">Sushan Gautam</h1>
+        <p>I'm a <span id="typed-text"></span></p><br>
+        <div class="social">
+            <a href="https://facebook.com/gautamsushan23" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gautam_sushan_25" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gautamsushan23" target="_blank" aria-label="GitHub"> <i class="fab fa-github"></i></a>
+            <a href="mailto:gautamsushan23@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <!-- Photo Section -->
+    <div class="hero-photo">
+        <img src="./Images/Profile.jpg" alt="My Photo" class="profile-photo">
+    </div>
+    
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Hi, My name is Sushan Gautam. I'm a student. I'm currently studying
+             Bachelors of Science in Computer Science and Information Technology (BSc. CSIT)
+             at St Lawrence College in 5th semester. I'm permanently from Hetauda. </p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        
+        <div class="skill">
+            <p><i class="fab fa-html5" style="color: #e34c26;"></i> HTML <span>90%</span></p>
+            <div class="progress"><div class="progress-bar" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill">
+            <p><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS <span>80%</span></p>
+            <div class="progress"><div class="progress-bar" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="skill">
+            <p><i class="fab fa-js" style="color: #f0db4f;"></i> JavaScript <span>60%</span></p>
+            <div class="progress"><div class="progress-bar" style="width: 60%;"></div></div>
+        </div>
+
+        <div class="skill">
+            <p><i class="fab fa-python" style="color: #306998;"></i> Python <span>75%</span></p>
+            <div class="progress"><div class="progress-bar" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill">
+            <p><i class="fas fa-database" style="color: #00758f;"></i> MySQL <span>50%</span></p>
+            <div class="progress"><div class="progress-bar" style="width: 50%;"></div></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="./Images/web-development.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Ex accusamus ea qui consequuntur, aut incidunt quam eius 
+                    voluptates fugit odio repudiandae saepe repellendus.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="./Images/web-development.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Ex accusamus ea qui consequuntur, aut incidunt quam eius 
+                    voluptates fugit odio repudiandae saepe repellendus.</p>
+            </div>
+            <!-- Project 3 -->
+            <div class="project">
+                <img src="./Images/web-development.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Ex accusamus ea qui consequuntur, aut incidunt quam eius 
+                    voluptates fugit odio repudiandae saepe repellendus.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/movevlbb" method="post" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="successMessage" style="color: green; display: none;">Your message has been sent!</p>
+    </div>
+</section>
+
+<!-- Footer with Social Media Links -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Sushan Gautam. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com/gautamsushan23" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/gautam_sushan_25" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gautamsushan23" target="_blank" aria-label="GitHub"> <i class="fab fa-github"></i></a>
+            <a href="mailto:gautamsushan23@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

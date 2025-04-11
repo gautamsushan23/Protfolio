@@ -1,0 +1,419 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color:#e74c3c;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    height: 6spx;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 35px;
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.5s ease;
+}
+
+.nav-links li a:hover {
+    color: black;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+.hamburger:hover {
+    color: black;
+}
+
+
+/* Hero Section */
+.hero {
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    padding: 85px ;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.welcome {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.sushan {
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+.hero p {
+    font-size: 28px;
+}
+#typed-text {
+    color: #e74c3c;
+    font-weight: bold;
+    caret-color: #e74c3c; 
+}
+
+.typed-cursor {
+    color: #e74c3c; 
+}
+
+/* Hero social */
+.social {
+    margin-top: 30px;
+}
+
+.social a {
+    color: #fff;
+    font-size: 1.25em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #e74c3c;
+}
+
+/* Photo Section */
+.hero-photo img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 2px solid white;
+    
+}
+
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.skill {
+    margin-bottom: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.skill p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.skill p i {
+    margin-right: 10px;
+    font-size: 1.3em;
+    vertical-align: middle;
+    color: #333;
+}
+
+.skill p span {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1em;
+    color: #333;
+}
+
+.progress {
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    background: #e74c3c;
+    width: 0;
+    transition: width 1s ease-in-out;
+    border-radius: 6px 0 0 6px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project p {
+    color: #333;
+    padding: 10px;
+}
+
+/* Hover Effects */
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact form label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: grey;
+    outline: none;
+}
+
+#contact form button {
+    background-color: black;;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #666;
+    
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #e74c3c;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+:target {
+    scroll-margin-top: 65px; 
+}
+
+/* Responsive Design */
+@media (max-width: 790px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .hero-photo {
+        order: -1;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 32%;
+        position: absolute;
+        top: 70px;
+        right: 0%;
+        background-color:#e74c3c;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 28px;
+    }
+}
